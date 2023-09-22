@@ -13,10 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Managers">
+      <UniqueIdentifier>{f9844654-87a9-4af1-aaed-dbd0d547bfc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Math">
+      <UniqueIdentifier>{adb35ff4-8629-4db1-ad52-63873e6ec385}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Managers">
+      <UniqueIdentifier>{677c218a-9452-47b5-9988-f3e11c57d2e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\NewFilter1">
+      <UniqueIdentifier>{37004620-0469-40f5-990a-bba1d7a6dc9b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mount 2.0.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+    <ClCompile Include="graphicmanager.cpp">
+      <Filter>Arquivos de Origem\Managers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="std.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="coordinate.h">
+      <Filter>Arquivos de Cabeçalho\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="graphicmanager.h">
+      <Filter>Arquivos de Cabeçalho\Managers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
