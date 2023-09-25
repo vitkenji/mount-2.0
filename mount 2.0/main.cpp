@@ -1,18 +1,18 @@
 #include "graphicmanager.h"
 #include "std.h"
+#include "enemy.h"
 
 int main()
 {
     Managers::GraphicManager* pGraphic = pGraphic->getInstance();;
+    Enemy enemy;
 
     while (pGraphic->isWindowOpen())
     {
-
         pGraphic->clear();
         sf::RectangleShape* rectangle = new sf::RectangleShape();
-        rectangle->setSize(sf::Vector2f(100.f, 100.f));
-        rectangle->setFillColor(sf::Color(12,120,12));
-        pGraphic->render(rectangle);
+      
+        pGraphic->render(enemy.body);
         pGraphic->display();
 
        

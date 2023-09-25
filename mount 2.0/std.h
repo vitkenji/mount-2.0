@@ -3,6 +3,7 @@
 #include <iostream>
 #include <map>
 #include <stdio.h>
+#include "coordinate.h"
 
 //defines
 

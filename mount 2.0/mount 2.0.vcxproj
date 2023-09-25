@@ -133,12 +133,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ent.cpp" />
+    <ClCompile Include="entity.cpp" />
     <ClCompile Include="graphicmanager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="movingentity.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="coordinate.h" />
+    <ClInclude Include="enemy.h" />
+    <ClInclude Include="ent.h" />
+    <ClInclude Include="entity.h" />
     <ClInclude Include="graphicmanager.h" />
+    <ClInclude Include="movingentity.h" />
+    <ClInclude Include="character.h" />
+    <ClInclude Include="player.h" />
     <ClInclude Include="std.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

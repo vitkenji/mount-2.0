@@ -121,5 +121,6 @@ namespace Managers
 	sf::RenderWindow* GraphicManager::getWindow() const
 	{
 		return window;
+
 	}
 }

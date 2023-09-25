@@ -22,8 +22,23 @@
     <Filter Include="Arquivos de Origem\Managers">
       <UniqueIdentifier>{677c218a-9452-47b5-9988-f3e11c57d2e4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Arquivos de Origem\NewFilter1">
+    <Filter Include="Arquivos de Origem\Entities">
       <UniqueIdentifier>{37004620-0469-40f5-990a-bba1d7a6dc9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Entities">
+      <UniqueIdentifier>{4a2bc212-33b8-4285-892c-aaab910cc630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Entities\Characters">
+      <UniqueIdentifier>{4a145419-cbca-4b7a-8732-2b49553ba826}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Entities\Characters\Enemies">
+      <UniqueIdentifier>{4e4cf58a-5d27-4805-8959-302a4e19b760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Entities\Characters">
+      <UniqueIdentifier>{02ef0cb3-26ee-46fb-ac35-cc053c1c37a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Entities\Characters\Enemies">
+      <UniqueIdentifier>{e94bd381-0d45-488f-9dae-9022b90a6401}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -32,6 +47,15 @@
     </ClCompile>
     <ClCompile Include="graphicmanager.cpp">
       <Filter>Arquivos de Origem\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="ent.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>Arquivos de Origem\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="movingentity.cpp">
+      <Filter>Arquivos de Origem\Entities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +67,24 @@
     </ClInclude>
     <ClInclude Include="graphicmanager.h">
       <Filter>Arquivos de Cabeçalho\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="ent.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>Arquivos de Cabeçalho\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="movingentity.h">
+      <Filter>Arquivos de Cabeçalho\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="character.h">
+      <Filter>Arquivos de Cabeçalho\Entities\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Arquivos de Cabeçalho\Entities\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>Arquivos de Cabeçalho\Entities\Characters\Enemies</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
