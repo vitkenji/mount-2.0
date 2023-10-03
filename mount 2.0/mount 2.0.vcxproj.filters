@@ -40,6 +40,18 @@
     <Filter Include="Arquivos de Origem\Entities\Characters\Enemies">
       <UniqueIdentifier>{e94bd381-0d45-488f-9dae-9022b90a6401}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Control">
+      <UniqueIdentifier>{69d4da92-8ead-4d26-bb97-80396971585c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Control">
+      <UniqueIdentifier>{155537fe-1afd-4972-bd6c-e42ee4f4042d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\GraphicalElements">
+      <UniqueIdentifier>{2f892dfd-7b67-4ec0-a7ca-c180917219f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\GraphicalElements">
+      <UniqueIdentifier>{23276769-e052-4caa-b3b4-2a394d2f51e7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -56,6 +68,33 @@
     </ClCompile>
     <ClCompile Include="movingentity.cpp">
       <Filter>Arquivos de Origem\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="character.cpp">
+      <Filter>Arquivos de Origem\Entities\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>Arquivos de Origem\Entities\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="observer.cpp">
+      <Filter>Arquivos de Origem\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="inputmanager.cpp">
+      <Filter>Arquivos de Origem\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="playercontrol.cpp">
+      <Filter>Arquivos de Origem\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="animation.cpp">
+      <Filter>Arquivos de Origem\GraphicalElements</Filter>
+    </ClCompile>
+    <ClCompile Include="singleanimation.cpp">
+      <Filter>Arquivos de Origem\GraphicalElements</Filter>
+    </ClCompile>
+    <ClCompile Include="singleframeanimation.cpp">
+      <Filter>Arquivos de Origem\GraphicalElements</Filter>
+    </ClCompile>
+    <ClCompile Include="multiframeanimation.cpp">
+      <Filter>Arquivos de Origem\GraphicalElements</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +124,42 @@
     </ClInclude>
     <ClInclude Include="enemy.h">
       <Filter>Arquivos de Cabeçalho\Entities\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="goblin.h">
+      <Filter>Arquivos de Cabeçalho\Entities\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="skeleton.h">
+      <Filter>Arquivos de Cabeçalho\Entities\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="inputmanager.h">
+      <Filter>Arquivos de Cabeçalho\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="observer.h">
+      <Filter>Arquivos de Cabeçalho\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="playercontrol.h">
+      <Filter>Arquivos de Cabeçalho\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="eventmanager.h">
+      <Filter>Arquivos de Cabeçalho\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="animation.h">
+      <Filter>Arquivos de Cabeçalho\GraphicalElements</Filter>
+    </ClInclude>
+    <ClInclude Include="singleanimation.h">
+      <Filter>Arquivos de Cabeçalho\GraphicalElements</Filter>
+    </ClInclude>
+    <ClInclude Include="singleframeanimation.h">
+      <Filter>Arquivos de Cabeçalho\GraphicalElements</Filter>
+    </ClInclude>
+    <ClInclude Include="multiframeanimation.h">
+      <Filter>Arquivos de Cabeçalho\GraphicalElements</Filter>
+    </ClInclude>
+    <ClInclude Include="paths.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="constants.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,8 +2,9 @@
 
 namespace Entities
 {
+
 	MovingEntity::MovingEntity(Math::CoordinateF position, Math::CoordinateF size, ID id, Math::CoordinateF velocity): Entity(position, size, id), 
-		velocity(velocity), facingLeft(false), active(false), damage(0){}
+		velocity(velocity), facingLeft(false), active(false), damage(0), sprite(){}
 
 	MovingEntity::~MovingEntity(){}
 
@@ -55,4 +56,9 @@ namespace Entities
 
 	}
 
+	void MovingEntity::render()
+	{
+		sprite.render();
+
+	}
 }

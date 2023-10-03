@@ -13,7 +13,7 @@ namespace Managers
 
 	GraphicManager::GraphicManager():
 		window(new sf::RenderWindow(sf::VideoMode(WIDTH, HEIGHT), "Desert", sf::Style::Titlebar | sf::Style::Close)),
-	    view(sf::Vector2f(WIDTH / 2, HEIGHT / 2), sf::Vector2f(WIDTH, HEIGHT)), textureMap(), fontMap() {}
+	    view(sf::Vector2f(WIDTH / 2, HEIGHT / 2), sf::Vector2f(WIDTH, HEIGHT)), textureMap(), fontMap(){}
 
 	GraphicManager::~GraphicManager()
 	{
@@ -49,6 +49,7 @@ namespace Managers
 
 	bool GraphicManager::isWindowOpen() const
 	{
+
 		return window->isOpen();
 
 	}

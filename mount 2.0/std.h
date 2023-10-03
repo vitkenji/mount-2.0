@@ -2,12 +2,11 @@
 #include "SFML/Graphics.hpp"
 #include <iostream>
 #include <map>
+#include <list>
+#include <vector>
+#include <string>
 #include <stdio.h>
+
 #include "coordinate.h"
-
-//defines
-
-//managers
-#define WIDTH 1080
-#define HEIGHT 720
-
+#include "paths.h"
+#include "constants.h"

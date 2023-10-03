@@ -2,7 +2,10 @@
 
 namespace Entities
 {
-	Entity::Entity(Math::CoordinateF position, Math::CoordinateF size, ID id): Ent(position, size), id(id){}
+	Entity::Entity(Math::CoordinateF position, Math::CoordinateF size, ID id): Ent(position, size), id(id)
+	{
+		body = new sf::RectangleShape;
+	}
 
 	ID Entity::getId() const
 	{

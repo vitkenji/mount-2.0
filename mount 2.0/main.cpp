@@ -1,18 +1,21 @@
 #include "graphicmanager.h"
 #include "std.h"
-#include "enemy.h"
+#include "player.h"
+#include "control.h"
 
 int main()
 {
-    Managers::GraphicManager* pGraphic = pGraphic->getInstance();;
-    Enemy enemy;
+    Managers::GraphicManager* pGraphic = Managers::GraphicManager::getInstance();
+    Entities::Characters::Player* player = new Entities::Characters::Player(Math::CoordinateF(400,400));
+    Control::PlayerControl* pControl = new Control::PlayerControl(player);
 
     while (pGraphic->isWindowOpen())
     {
+  
         pGraphic->clear();
-        sf::RectangleShape* rectangle = new sf::RectangleShape();
-      
-        pGraphic->render(enemy.body);
+        player->render();
+        //player->walk(false);
+        player->update(0.002);
         pGraphic->display();
 
        
