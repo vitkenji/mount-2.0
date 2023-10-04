@@ -96,6 +96,9 @@
     <ClCompile Include="multiframeanimation.cpp">
       <Filter>Arquivos de Origem\GraphicalElements</Filter>
     </ClCompile>
+    <ClCompile Include="eventmanager.cpp">
+      <Filter>Arquivos de Origem\Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="std.h">

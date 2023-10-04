@@ -21,8 +21,8 @@ namespace Entities
 		Math::CoordinateF getVelocity() const;
 		void setActive(const bool active);
 		const bool isActive() const;
-		void setFacingLeft(const bool facingLeft);
-		const bool isFacingLeft() const;
+		void setFacingLeft(bool facingLeft);
+		bool isFacingLeft();
 		void setDamage(unsigned int damage);
 		unsigned int getDamage() const;
 		//void moveOnCollision(Entity* other, Math::CoordinateF intersection);

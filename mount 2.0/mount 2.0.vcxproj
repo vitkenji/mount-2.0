@@ -137,6 +137,7 @@
     <ClCompile Include="character.cpp" />
     <ClCompile Include="ent.cpp" />
     <ClCompile Include="entity.cpp" />
+    <ClCompile Include="eventmanager.cpp" />
     <ClCompile Include="graphicmanager.cpp" />
     <ClCompile Include="inputmanager.cpp" />
     <ClCompile Include="main.cpp" />

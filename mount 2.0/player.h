@@ -14,7 +14,6 @@ namespace Entities
 			bool isWalking;
 			bool isSprinting;
 			bool canJump;
-			bool isAttacking;
 
 		public:
 			Player(Math::CoordinateF position);
@@ -24,9 +23,14 @@ namespace Entities
 			void setPoints(int points);
 			int getPoints();
 			void attack();
-			void walk(bool right);
+			void walk(bool left);
 			void jump();
 			void sprint();
+
+			void setIsWalking(bool flag);
+			void setIsSprinting(bool flag);
+			bool getIsWalking();
+			bool getIsSprinting();
 
 		    void initialize();
 			void update(const float dt);

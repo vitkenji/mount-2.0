@@ -16,7 +16,8 @@ namespace Entities
 			~Character();
 			void setLife(int life);
 			int getLife();
-			const bool getIsAttacking() const;
+			void setIsAttacking(bool flag);
+		    bool getIsAttacking();
 
 			virtual void initialize() = 0;
 			virtual void update(const float dt) = 0;

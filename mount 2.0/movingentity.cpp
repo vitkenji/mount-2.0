@@ -32,13 +32,13 @@ namespace Entities
 
 	}
 
-	void MovingEntity::setFacingLeft(const bool facingLeft)
+	void MovingEntity::setFacingLeft( bool facingLeft)
 	{
 		this->facingLeft = facingLeft;
 
 	}
 
-	const bool MovingEntity::isFacingLeft() const
+	bool MovingEntity::isFacingLeft()
 	{
 		return this->facingLeft;
 

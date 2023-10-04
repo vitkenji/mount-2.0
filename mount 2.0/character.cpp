@@ -22,7 +22,13 @@ namespace Entities
 
 		}
 
-		const bool Character::getIsAttacking() const
+		void Character::setIsAttacking(bool flag)
+		{
+			this->isAttacking = flag;
+
+		}
+
+		bool Character::getIsAttacking()
 		{
 			return isAttacking;
 
