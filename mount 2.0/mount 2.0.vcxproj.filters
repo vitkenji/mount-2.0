@@ -52,6 +52,12 @@
     <Filter Include="Arquivos de Origem\GraphicalElements">
       <UniqueIdentifier>{23276769-e052-4caa-b3b4-2a394d2f51e7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Entities\Obstacles">
+      <UniqueIdentifier>{68ac23b6-c77a-4d23-ac21-82befdbaab27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Entities\Obstacles">
+      <UniqueIdentifier>{629bfbcf-efcf-4635-898e-ffe3a2a3bc39}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -98,6 +104,12 @@
     </ClCompile>
     <ClCompile Include="eventmanager.cpp">
       <Filter>Arquivos de Origem\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="staticentity.cpp">
+      <Filter>Arquivos de Origem\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="platform.cpp">
+      <Filter>Arquivos de Origem\Entities\Obstacles</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +175,12 @@
     </ClInclude>
     <ClInclude Include="constants.h">
       <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="platform.h">
+      <Filter>Arquivos de Cabeçalho\Entities\Obstacles</Filter>
+    </ClInclude>
+    <ClInclude Include="staticentity.h">
+      <Filter>Arquivos de Cabeçalho\Entities</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

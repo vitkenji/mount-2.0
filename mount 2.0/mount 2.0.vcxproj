@@ -144,10 +144,12 @@
     <ClCompile Include="movingentity.cpp" />
     <ClCompile Include="multiframeanimation.cpp" />
     <ClCompile Include="observer.cpp" />
+    <ClCompile Include="platform.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="playercontrol.cpp" />
     <ClCompile Include="singleanimation.cpp" />
     <ClCompile Include="singleframeanimation.cpp" />
+    <ClCompile Include="staticentity.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="animation.h" />
@@ -165,11 +167,13 @@
     <ClInclude Include="multiframeanimation.h" />
     <ClInclude Include="observer.h" />
     <ClInclude Include="paths.h" />
+    <ClInclude Include="platform.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="playercontrol.h" />
     <ClInclude Include="singleanimation.h" />
     <ClInclude Include="singleframeanimation.h" />
     <ClInclude Include="skeleton.h" />
+    <ClInclude Include="staticentity.h" />
     <ClInclude Include="std.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

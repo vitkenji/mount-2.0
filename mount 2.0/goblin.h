@@ -13,7 +13,13 @@ namespace Entities
 			private:
 
 			public:
+				Goblin();
+				~Goblin();
 
+				void initialize();
+				void update(const float dt);
+				void collide(Entity* other, Math::CoordinateF intersection);
+				void updateSprite(const float dt);
 			};
 		}
 	}

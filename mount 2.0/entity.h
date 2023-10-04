@@ -8,18 +8,21 @@ namespace Entities
 	{
 		empty = 0,
 		player,
+		goblin,
+		skeleton,
+		boss,
+		platform
 	};
 
 	class Entity : public Ent
 	{
 
 	protected:
-		//sf::RectangleShape* body;
+		sf::RectangleShape* body;
 		sf::Texture* texture;
 		ID id;
 
 	public:
-		sf::RectangleShape* body;
 		Entity(Math::CoordinateF position, Math::CoordinateF size, ID id);
 		virtual ~Entity();
 		ID getId() const;

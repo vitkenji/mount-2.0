@@ -11,8 +11,11 @@ namespace Entities
 			class Enemy : public Character
 			{
 			protected:
-			public:
 				
+			public:
+				Enemy();
+				~Enemy();
+
 			};
 		}
 	}

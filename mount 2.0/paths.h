@@ -4,3 +4,6 @@
 #define PLAYER_JUMP_PATH "assets/player_jump.png"
 #define PLAYER_ATTACK_PATH "assets/player_attack1.png"
 
+//obstacles
+#define PLATFORM_PATH "assets/platform1.png"
+
