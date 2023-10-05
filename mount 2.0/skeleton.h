@@ -16,6 +16,7 @@ namespace Entities
 				Skeleton(Math::CoordinateF position);
 				~Skeleton();
 				
+				void walk(bool left);
 				void initialize();
 				void update(const float dt);
 				void collide(Entity* other, Math::CoordinateF intersection);

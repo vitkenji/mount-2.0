@@ -139,6 +139,7 @@
     <ClCompile Include="ent.cpp" />
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="eventmanager.cpp" />
+    <ClCompile Include="fire.cpp" />
     <ClCompile Include="goblin.cpp" />
     <ClCompile Include="graphicmanager.cpp" />
     <ClCompile Include="inputmanager.cpp" />
@@ -156,12 +157,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="animation.h" />
+    <ClInclude Include="collisionmanager.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="coordinate.h" />
     <ClInclude Include="enemy.h" />
     <ClInclude Include="ent.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="eventmanager.h" />
+    <ClInclude Include="fire.h" />
     <ClInclude Include="goblin.h" />
     <ClInclude Include="graphicmanager.h" />
     <ClInclude Include="inputmanager.h" />

@@ -34,6 +34,18 @@ namespace Entities
 
 		}
 
+		void Character::setIsWalking(bool flag)
+		{
+			this->isWalking = flag;
+
+		}
+
+
+		bool Character::getIsWalking()
+		{
+			return isWalking;
+
+		}
 
 	}
 }

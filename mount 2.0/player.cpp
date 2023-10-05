@@ -75,21 +75,10 @@ namespace Entities
 
 		}
 
-		void Player::setIsWalking(bool flag)
-		{
-			this->isWalking = flag;
-
-		}
 
 		void Player::setIsSprinting(bool flag)
 		{
 			this->isSprinting = flag;
-
-		}
-
-		bool Player::getIsWalking()
-		{
-			return isWalking;
 
 		}
 
@@ -104,7 +93,7 @@ namespace Entities
 			if (getIsWalking())
 			{
 				position.x += velocity.x * dt;
-				if (getIsSprinting()) { position.x += 0.5 * velocity.x * dt; }
+				if (getIsSprinting()) { position.x += 0.1 * velocity.x * dt; }
 
 			}
 
@@ -119,6 +108,7 @@ namespace Entities
 			sprite.addNewAnimation(GraphicalElements::Animation_ID::run, PLAYER_RUN_PATH, 8, 0.2);
 			sprite.addNewAnimation(GraphicalElements::Animation_ID::attack, PLAYER_ATTACK_PATH, 6, 0.2);
 			sprite.addNewAnimation(GraphicalElements::Animation_ID::jump, PLAYER_JUMP_PATH, 2, 0.2);
+			sprite.addNewAnimation(GraphicalElements::Animation_ID::takeHit, PLAYER_TAKEHIT_PATH, 4, 0.4);
 
 		}
 		
@@ -128,18 +118,9 @@ namespace Entities
 		
 		void Player::updateSprite(const float dt)
 		{
-			if (getIsWalking())
-			{
-					if (isFacingLeft()) { sprite.update(GraphicalElements::Animation_ID::run, isFacingLeft(), position, dt); }
-					else { sprite.update(GraphicalElements::Animation_ID::run, isFacingLeft(), position, dt); }
+			if (getIsWalking()){ sprite.update(GraphicalElements::Animation_ID::run, isFacingLeft(), position, dt); }
 			
-			}
-			
-			if (isAttacking)
-			{
-				sprite.update(GraphicalElements::Animation_ID::attack, isFacingLeft(), position, dt);
-		
-			}
+			if (isAttacking) { sprite.update(GraphicalElements::Animation_ID::attack, isFacingLeft(), position, dt); }
 
 			else if(!getIsWalking()) { sprite.update(GraphicalElements::Animation_ID::idle, isFacingLeft(), position, dt); }
 

@@ -15,3 +15,6 @@
 //obstacles
 #define PLATFORM_WIDTH 192
 #define PLATFORM_HEIGHT 48
+
+#define FIRE_WIDTH 24
+#define FIRE_HEIGHT 32

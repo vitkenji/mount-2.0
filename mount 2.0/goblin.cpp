@@ -16,6 +16,18 @@ namespace Entities
 
 			}
 
+			void Goblin::walk(bool left)
+			{
+				setIsWalking(true);
+				velocity.x = -40;
+				if (!left)
+				{
+					velocity.x *= -1;
+					setFacingLeft(false);
+
+				}
+			}
+
 			void Goblin::initialize()
 			{
 				sprite.addNewAnimation(GraphicalElements::Animation_ID::idle, GOBLIN_IDLE_PATH, 4, 0.3);

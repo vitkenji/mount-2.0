@@ -120,6 +120,9 @@
     <ClCompile Include="goblin.cpp">
       <Filter>Arquivos de Origem\Entities\Characters\Enemies</Filter>
     </ClCompile>
+    <ClCompile Include="fire.cpp">
+      <Filter>Arquivos de Origem\Entities\Obstacles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="std.h">
@@ -190,6 +193,12 @@
     </ClInclude>
     <ClInclude Include="staticentity.h">
       <Filter>Arquivos de Cabeçalho\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="collisionmanager.h">
+      <Filter>Arquivos de Cabeçalho\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="fire.h">
+      <Filter>Arquivos de Cabeçalho\Entities\Obstacles</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

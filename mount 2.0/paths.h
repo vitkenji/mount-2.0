@@ -3,9 +3,9 @@
 #define PLAYER_IDLE_PATH "assets/players/player1_idle.png"
 #define PLAYER_JUMP_PATH "assets/players/player1_jump.png"
 #define PLAYER_ATTACK_PATH "assets/players/player1_attack1.png"
+#define PLAYER_TAKEHIT_PATH "assets/players/take_hit.png"
 
 //enemies
-
 #define GOBLIN_IDLE_PATH "assets/enemies/goblin/Idle.png"
 #define GOBLIN_RUN_PATH "assets/enemies/goblin/Run.png"
 #define GOBLIN_ATTACK_PATH "assets/enemies/goblin/Attack3.png"
@@ -20,3 +20,6 @@
 
 //obstacles
 #define PLATFORM_PATH "assets/obstacles/platform1.png"
+
+#define FIRE_LOOP_PATH "assets/obstacles/burning_loop_1.png"
+

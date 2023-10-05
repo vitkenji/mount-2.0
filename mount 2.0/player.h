@@ -23,15 +23,12 @@ namespace Entities
 			void setPoints(int points);
 			int getPoints();
 			void attack();
-			void walk(bool left);
 			void jump();
 			void sprint();
-
-			void setIsWalking(bool flag);
 			void setIsSprinting(bool flag);
-			bool getIsWalking();
 			bool getIsSprinting();
 
+			void walk(bool left);
 		    void initialize();
 			void update(const float dt);
 		    void collide(Entity* other, Math::CoordinateF intersection);

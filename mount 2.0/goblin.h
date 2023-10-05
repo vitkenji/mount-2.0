@@ -15,7 +15,8 @@ namespace Entities
 			public:
 				Goblin(Math::CoordinateF position);
 				~Goblin();
-
+				
+				void walk(bool left);
 				void initialize();
 				void update(const float dt);
 				void collide(Entity* other, Math::CoordinateF intersection);

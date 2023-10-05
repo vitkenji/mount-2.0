@@ -11,7 +11,8 @@ namespace Entities
 		goblin,
 		skeleton,
 		boss,
-		platform
+		platform,
+		fire,
 	};
 
 	class Entity : public Ent
