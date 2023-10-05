@@ -111,6 +111,15 @@
     <ClCompile Include="platform.cpp">
       <Filter>Arquivos de Origem\Entities\Obstacles</Filter>
     </ClCompile>
+    <ClCompile Include="enemy.cpp">
+      <Filter>Arquivos de Origem\Entities\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="skeleton.cpp">
+      <Filter>Arquivos de Origem\Entities\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="goblin.cpp">
+      <Filter>Arquivos de Origem\Entities\Characters\Enemies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="std.h">

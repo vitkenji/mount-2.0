@@ -13,7 +13,7 @@ namespace Entities
 			private:
 
 			public:
-				Skeleton();
+				Skeleton(Math::CoordinateF position);
 				~Skeleton();
 				
 				void initialize();

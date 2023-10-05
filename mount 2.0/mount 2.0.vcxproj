@@ -135,9 +135,11 @@
   <ItemGroup>
     <ClCompile Include="animation.cpp" />
     <ClCompile Include="character.cpp" />
+    <ClCompile Include="enemy.cpp" />
     <ClCompile Include="ent.cpp" />
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="eventmanager.cpp" />
+    <ClCompile Include="goblin.cpp" />
     <ClCompile Include="graphicmanager.cpp" />
     <ClCompile Include="inputmanager.cpp" />
     <ClCompile Include="main.cpp" />
@@ -149,6 +151,7 @@
     <ClCompile Include="playercontrol.cpp" />
     <ClCompile Include="singleanimation.cpp" />
     <ClCompile Include="singleframeanimation.cpp" />
+    <ClCompile Include="skeleton.cpp" />
     <ClCompile Include="staticentity.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -13,7 +13,7 @@ namespace Entities
 			private:
 
 			public:
-				Goblin();
+				Goblin(Math::CoordinateF position);
 				~Goblin();
 
 				void initialize();

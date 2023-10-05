@@ -12,7 +12,9 @@ namespace GraphicalElements
 		attack,
 		run,
 		cooldown,
-		jump
+		jump,
+		takeHit,
+		death
 	};
 
 	class MultiFrameAnimation : public Animation
