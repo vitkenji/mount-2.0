@@ -9,6 +9,7 @@
 #include "goblin.h"
 #include "fire.h"
 #include "entitylist.h"
+#include "singleframeanimation.h"
 
 namespace States
 {
@@ -23,7 +24,8 @@ namespace States
 		Entities::Characters::Enemies::Goblin* goblin;
 		Entities::Obstacles::Fire* fire;
 		List::EntityList entitiesList;
-
+		GraphicalElements::SingleFrameAnimation background;
+		
 	public:
 		Game();
 		~Game();

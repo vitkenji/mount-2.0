@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClCompile Include="animation.cpp" />
     <ClCompile Include="character.cpp" />
+    <ClCompile Include="collisionmanager.cpp" />
     <ClCompile Include="enemy.cpp" />
     <ClCompile Include="ent.cpp" />
     <ClCompile Include="entitylist.cpp" />

@@ -141,6 +141,9 @@
     <ClCompile Include="entitylist.cpp">
       <Filter>Arquivos de Origem\List</Filter>
     </ClCompile>
+    <ClCompile Include="collisionmanager.cpp">
+      <Filter>Arquivos de Origem\Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="std.h">

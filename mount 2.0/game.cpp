@@ -7,6 +7,8 @@ namespace States
         pGraphic = Managers::GraphicManager::getInstance();
         pEvent = Managers::EventManager::getInstance();
 
+        background.initialize(BACKGROUND_PATH, Math::CoordinateF(540,360), Math::CoordinateF(WIDTH, HEIGHT));
+
         player = new Entities::Characters::Player(Math::CoordinateF(400, 630));
         entitiesList.addEntity(player);
         skeleton = new Entities::Characters::Enemies::Skeleton(Math::CoordinateF(600, 630));
@@ -15,7 +17,6 @@ namespace States
         entitiesList.addEntity(goblin);
         fire = new Entities::Obstacles::Fire(Math::CoordinateF(100, 660));
         entitiesList.addEntity(fire);
-        
         pControl = new Control::PlayerControl(player);
 
         execute();
@@ -28,6 +29,7 @@ namespace States
         while (pGraphic->isWindowOpen())
         {
             pGraphic->clear();
+            background.render();
             for (int i = 0; i < 8; i++)
             {
                 Entities::Obstacles::Platform* platform = new Entities::Obstacles::Platform(Math::CoordinateF(0 + 192 * i, 700));
@@ -42,17 +44,6 @@ namespace States
 
             }
             pEvent->pollEvents();
-            /*
-            fire->render();
-            goblin->render();
-            skeleton->render();
-            player->render();
-            pEvent->pollEvents();
-            player->update(0.001);
-            goblin->update(0.001);
-            skeleton->update(0.001);
-            fire->update(0.001);
-            */
             pGraphic->display();
 
         }

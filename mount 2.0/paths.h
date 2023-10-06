@@ -23,3 +23,4 @@
 
 #define FIRE_LOOP_PATH "assets/obstacles/burning_loop_1.png"
 
+#define BACKGROUND_PATH "assets/background1.png"
