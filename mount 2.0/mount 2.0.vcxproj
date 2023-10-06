@@ -137,9 +137,11 @@
     <ClCompile Include="character.cpp" />
     <ClCompile Include="enemy.cpp" />
     <ClCompile Include="ent.cpp" />
+    <ClCompile Include="entitylist.cpp" />
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="eventmanager.cpp" />
     <ClCompile Include="fire.cpp" />
+    <ClCompile Include="game.cpp" />
     <ClCompile Include="goblin.cpp" />
     <ClCompile Include="graphicmanager.cpp" />
     <ClCompile Include="inputmanager.cpp" />
@@ -163,11 +165,14 @@
     <ClInclude Include="enemy.h" />
     <ClInclude Include="ent.h" />
     <ClInclude Include="entity.h" />
+    <ClInclude Include="entitylist.h" />
     <ClInclude Include="eventmanager.h" />
     <ClInclude Include="fire.h" />
+    <ClInclude Include="game.h" />
     <ClInclude Include="goblin.h" />
     <ClInclude Include="graphicmanager.h" />
     <ClInclude Include="inputmanager.h" />
+    <ClInclude Include="list.h" />
     <ClInclude Include="movingentity.h" />
     <ClInclude Include="character.h" />
     <ClInclude Include="multiframeanimation.h" />

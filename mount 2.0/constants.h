@@ -1,6 +1,7 @@
 //managers
 #define WIDTH 1080
 #define HEIGHT 720
+#define GRAVITY 981
 
 //entities
 #define PLAYER_SIZE_X 45
