@@ -144,6 +144,9 @@
     <ClCompile Include="collisionmanager.cpp">
       <Filter>Arquivos de Origem\Managers</Filter>
     </ClCompile>
+    <ClCompile Include="states.cpp">
+      <Filter>Arquivos de Origem\States</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="std.h">
@@ -229,6 +232,15 @@
     </ClInclude>
     <ClInclude Include="entitylist.h">
       <Filter>Arquivos de Cabeçalho\List</Filter>
+    </ClInclude>
+    <ClInclude Include="level.h">
+      <Filter>Arquivos de Cabeçalho\States</Filter>
+    </ClInclude>
+    <ClInclude Include="state.h">
+      <Filter>Arquivos de Cabeçalho\States</Filter>
+    </ClInclude>
+    <ClInclude Include="statemachine.h">
+      <Filter>Arquivos de Cabeçalho\States</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

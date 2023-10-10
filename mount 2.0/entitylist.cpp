@@ -30,15 +30,18 @@ namespace List
 
 	void EntityList::deleteEntity(Entities::Entity* pEntity)
 	{
-		Entities::Entity* ptr = entitiesList.pop(pEntity);
+		Entities::Entity* ptr = nullptr;
+		ptr = entitiesList.pop(pEntity);
+
 	
 		if (pEntity) { delete pEntity; }
-		if (ptr) { delete ptr; }
+		//if (ptr) { delete ptr; }
 
 	}
 	void EntityList::deleteEntity(unsigned int index)
 	{
-		Entities::Entity* ptr = entitiesList.pop(index);
+		Entities::Entity* ptr = nullptr;
+		ptr = entitiesList.pop(index);
 		if (ptr) { delete ptr; }
 
 	}

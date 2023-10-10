@@ -96,6 +96,9 @@ namespace Entities
 				if (getIsSprinting()) { position.x += 0.1 * velocity.x * dt; }
 
 			}
+			
+			position.y += velocity.y + (GRAVITY * dt * dt / 2.0f);
+			velocity.y += GRAVITY * dt;
 
 			updateSprite(dt);
 		
@@ -114,6 +117,33 @@ namespace Entities
 		
 		void Player::collide(Entity* other, Math::CoordinateF intersection)
 		{
+			//std::cout << "collided " << other->getId() << std::endl;
+			if (other->getId() == skeleton || other->getId() == goblin)
+			{
+				if (intersection.x <= 0)
+				{
+					this->velocity.x = 0;
+					this->life -= 10;
+				}
+
+				if (intersection.y <= 0)
+				{
+					this->velocity.y = 0;
+				}
+
+			}
+			if (other->getId() == platform)
+			{
+				velocity.y = 0;
+			}
+
+			else if (other->getId() == fire)
+			{
+				this->velocity.x = 0;
+				this->life -= 10;
+				std::cout << getLife() << std::endl;
+			}
+
 		}
 		
 		void Player::updateSprite(const float dt)

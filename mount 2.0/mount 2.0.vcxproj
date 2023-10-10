@@ -156,6 +156,7 @@
     <ClCompile Include="singleanimation.cpp" />
     <ClCompile Include="singleframeanimation.cpp" />
     <ClCompile Include="skeleton.cpp" />
+    <ClCompile Include="states.cpp" />
     <ClCompile Include="staticentity.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +174,7 @@
     <ClInclude Include="goblin.h" />
     <ClInclude Include="graphicmanager.h" />
     <ClInclude Include="inputmanager.h" />
+    <ClInclude Include="level.h" />
     <ClInclude Include="list.h" />
     <ClInclude Include="movingentity.h" />
     <ClInclude Include="character.h" />
@@ -185,6 +187,8 @@
     <ClInclude Include="singleanimation.h" />
     <ClInclude Include="singleframeanimation.h" />
     <ClInclude Include="skeleton.h" />
+    <ClInclude Include="state.h" />
+    <ClInclude Include="statemachine.h" />
     <ClInclude Include="staticentity.h" />
     <ClInclude Include="std.h" />
   </ItemGroup>

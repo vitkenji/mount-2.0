@@ -40,6 +40,9 @@ namespace Entities
 
 			void Goblin::update(const float dt)
 			{
+				position.y += velocity.y + (GRAVITY * dt * dt / 2.0f);
+				velocity.y += GRAVITY * dt;
+
 				updateSprite(dt);
 
 			}
@@ -49,8 +52,6 @@ namespace Entities
 				sprite.update(GraphicalElements::Animation_ID::idle, isFacingLeft(), position, dt);
 
 			}
-
-			void Goblin::collide(Entity* other, Math::CoordinateF intersection) {}
 
 		}
 	}

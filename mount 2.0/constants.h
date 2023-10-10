@@ -1,7 +1,8 @@
 //managers
 #define WIDTH 1080
 #define HEIGHT 720
-#define GRAVITY 981
+#define GRAVITY 0.0981
+#define TICK_RATE 0.0078125
 
 //entities
 #define PLAYER_SIZE_X 45

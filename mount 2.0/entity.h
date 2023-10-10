@@ -7,12 +7,12 @@ namespace Entities
 	enum ID
 	{
 		empty = 0,
-		player,
-		goblin,
-		skeleton,
-		boss,
-		platform,
-		fire,
+		player = 1,
+		goblin = 2,
+		skeleton = 3,
+		boss = 4,
+		platform = 5,
+		fire = 6,
 	};
 
 	class Entity : public Ent

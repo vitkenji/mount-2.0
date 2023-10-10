@@ -16,6 +16,19 @@ namespace Entities
 
 			}
 
+			void Enemy::collide(Entity* other, Math::CoordinateF intersection)
+			{
+				if (intersection.x <= 0)
+				{
+					velocity.x = 0;
+
+				}
+
+				if (intersection.y <= 0)
+				{
+					this->velocity.y = 0;
+				}
+			}
 			
 		}
 	}

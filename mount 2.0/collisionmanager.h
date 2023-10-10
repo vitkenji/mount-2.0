@@ -9,11 +9,11 @@ namespace Managers
 	class CollisionManager
 	{
 	private:
-		List::EntityList movingEntities;
-		List::EntityList staticEntities;
+		List::EntityList* movingEntities;
+		List::EntityList* staticEntities;
 
 	public:
-		CollisionManager();
+		CollisionManager(List::EntityList* movingEntities, List::EntityList* staticEntities);
 		~CollisionManager();
 		void collide();
 		void clear();

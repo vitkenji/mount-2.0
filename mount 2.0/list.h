@@ -112,7 +112,7 @@ namespace List
 	template<class TL>
 	TL* List<TL>::operator[](int index)
 	{
-		if(index >= size || index < 0) { std::cout << "error : segmentation fault on list"; exit(1); }
+		if (index >= size || index < 0) { std::cout << "error : segmentation fault on list index: " << index << " size: "  << size <<  std::endl; exit(1); }
 
 		Node<TL>* pAux = pFirst;
 

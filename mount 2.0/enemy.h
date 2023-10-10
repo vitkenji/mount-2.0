@@ -18,7 +18,7 @@ namespace Entities
 
 				virtual void initialize() = 0;
 				virtual void update(const float dt) = 0;
-				virtual void collide(Entity* other, Math::CoordinateF intersection) = 0;
+				virtual void collide(Entity* other, Math::CoordinateF intersection);
 				virtual void updateSprite(const float dt) = 0;
 
 			};

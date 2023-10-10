@@ -10,6 +10,7 @@
 #include "fire.h"
 #include "entitylist.h"
 #include "singleframeanimation.h"
+#include "collisionmanager.h"
 
 namespace States
 {
@@ -18,12 +19,15 @@ namespace States
 	private:
 		Managers::GraphicManager* pGraphic;
 		Managers::EventManager* pEvent;
+		Managers::CollisionManager CollisionManager;
+		List::EntityList movingEntitiesList;
+		List::EntityList staticEntitiesList;
+
 		Control::PlayerControl* pControl;
 		Entities::Characters::Player* player;
 		Entities::Characters::Enemies::Skeleton* skeleton;
 		Entities::Characters::Enemies::Goblin* goblin;
 		Entities::Obstacles::Fire* fire;
-		List::EntityList entitiesList;
 		GraphicalElements::SingleFrameAnimation background;
 		
 	public:

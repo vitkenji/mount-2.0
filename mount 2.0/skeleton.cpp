@@ -9,8 +9,8 @@ namespace Entities
 			Skeleton::Skeleton(Math::CoordinateF position) : Enemy(position, Math::CoordinateF(SKELETON_SIZE_X, SKELETON_SIZE_Y), Entities::ID::skeleton, Math::CoordinateF(0,0), 1000)
 			{
 				initialize();
-				walk(false);
-				setFacingLeft(true);
+				walk(true);
+				setFacingLeft(false);
 			}
 
 			Skeleton::~Skeleton()
@@ -48,11 +48,13 @@ namespace Entities
 					if (position.x >= 850) { velocity.x = 0; setIsWalking(false); }
 				}
 
+				position.y += velocity.y + (GRAVITY * dt * dt / 2.0f);
+				velocity.y += GRAVITY * dt;
+
 				updateSprite(dt);
 
 			}
 
-			void Skeleton::collide(Entity* other, Math::CoordinateF intersection){}
 			
 			void Skeleton::updateSprite(const float dt)
 			{

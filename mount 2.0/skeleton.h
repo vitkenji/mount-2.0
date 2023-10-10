@@ -19,7 +19,6 @@ namespace Entities
 				void walk(bool left);
 				void initialize();
 				void update(const float dt);
-				void collide(Entity* other, Math::CoordinateF intersection);
 				void updateSprite(const float dt);
 			};
 		}
