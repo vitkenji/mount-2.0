@@ -10,6 +10,7 @@ namespace Entities
 		protected:
 			int life;
 			bool isAttacking;
+			bool wasAttacked;
 			bool isWalking;
 
 		public:
@@ -21,6 +22,8 @@ namespace Entities
 		    bool getIsAttacking();
 			void setIsWalking(bool flag);
 			bool getIsWalking();
+			void setWasAttacked(bool flag);
+			bool getWasAttacked();
 
 			virtual void walk(bool left) = 0;
 			virtual void initialize() = 0;

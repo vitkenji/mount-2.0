@@ -45,7 +45,6 @@ namespace Entities
 				if (getIsWalking())
 				{
 					position.x += velocity.x * dt;
-					if (position.x >= 850) { velocity.x = 0; setIsWalking(false); }
 				}
 
 				position.y += velocity.y + (GRAVITY * dt * dt / 2.0f);
@@ -55,6 +54,24 @@ namespace Entities
 
 			}
 
+			void Skeleton::collide(Entity* other, Math::CoordinateF intersection)
+			{
+				if (other->getId() == player)
+				{
+					setIsWalking(false);
+					setIsAttacking(true);
+					if (intersection.x <= 0)
+					{
+						velocity.x = 0;
+
+					}
+				}
+
+				if (intersection.y <= 0)
+				{
+					this->velocity.y = 0;
+				}
+			}
 			
 			void Skeleton::updateSprite(const float dt)
 			{
@@ -65,7 +82,7 @@ namespace Entities
 
 				}
 
-				if (isAttacking)
+				else if (getIsAttacking())
 				{
 					sprite.update(GraphicalElements::Animation_ID::attack, isFacingLeft(), position, dt);
 

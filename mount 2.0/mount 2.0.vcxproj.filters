@@ -70,6 +70,9 @@
     <Filter Include="Arquivos de Origem\List">
       <UniqueIdentifier>{64306c6b-5ff6-4b46-bc6a-a72912ee90a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Menus">
+      <UniqueIdentifier>{5b4bb15f-adb9-4c36-84c2-26ac52e87515}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -146,6 +149,15 @@
     </ClCompile>
     <ClCompile Include="states.cpp">
       <Filter>Arquivos de Origem\States</Filter>
+    </ClCompile>
+    <ClCompile Include="menucontrol.cpp">
+      <Filter>Arquivos de Origem\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="text.cpp">
+      <Filter>Arquivos de Origem\GraphicalElements</Filter>
+    </ClCompile>
+    <ClCompile Include="button.cpp">
+      <Filter>Arquivos de Origem\GraphicalElements</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -241,6 +253,18 @@
     </ClInclude>
     <ClInclude Include="statemachine.h">
       <Filter>Arquivos de Cabeçalho\States</Filter>
+    </ClInclude>
+    <ClInclude Include="menucontrol.h">
+      <Filter>Arquivos de Cabeçalho\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>Arquivos de Cabeçalho\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>Arquivos de Cabeçalho\GraphicalElements</Filter>
+    </ClInclude>
+    <ClInclude Include="text.h">
+      <Filter>Arquivos de Cabeçalho\GraphicalElements</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -47,5 +47,16 @@ namespace Entities
 
 		}
 
+		void Character::setWasAttacked(bool flag)
+		{
+			this->wasAttacked = flag;
+
+		}
+
+		bool Character::getWasAttacked()
+		{
+			return wasAttacked;
+		}
+
 	}
 }

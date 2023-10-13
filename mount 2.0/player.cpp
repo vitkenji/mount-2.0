@@ -10,8 +10,8 @@ namespace Entities
 			initialize();
 			coins = 0;
 			points = 0;
-			body->setPosition(sf::Vector2f(position.x, position.y));
-			body->setSize(sf::Vector2f(size.x, size.y));
+			attackedCooldown = 0;
+			canJump = true;
 			
 		}
 
@@ -51,9 +51,12 @@ namespace Entities
 		{
 			if (canJump)
 			{
+				velocity.y = -sqrt(2*GRAVITY*0.1);
 				canJump = false;
+				
 
 			}
+
 		}
 
 		void Player::walk(bool left)
@@ -71,7 +74,7 @@ namespace Entities
 		void Player::sprint()
 		{
 			isSprinting = true;
-			velocity.x *= 2;
+			velocity.x *= 1.2;
 
 		}
 
@@ -111,15 +114,16 @@ namespace Entities
 			sprite.addNewAnimation(GraphicalElements::Animation_ID::run, PLAYER_RUN_PATH, 8, 0.2);
 			sprite.addNewAnimation(GraphicalElements::Animation_ID::attack, PLAYER_ATTACK_PATH, 6, 0.2);
 			sprite.addNewAnimation(GraphicalElements::Animation_ID::jump, PLAYER_JUMP_PATH, 2, 0.2);
-			sprite.addNewAnimation(GraphicalElements::Animation_ID::takeHit, PLAYER_TAKEHIT_PATH, 4, 0.4);
+			sprite.addNewAnimation(GraphicalElements::Animation_ID::takeHit, PLAYER_TAKEHIT_PATH, 4, 0.3);
 
 		}
 		
 		void Player::collide(Entity* other, Math::CoordinateF intersection)
 		{
-			//std::cout << "collided " << other->getId() << std::endl;
 			if (other->getId() == skeleton || other->getId() == goblin)
 			{
+				setWasAttacked(true);
+
 				if (intersection.x <= 0)
 				{
 					this->velocity.x = 0;
@@ -129,11 +133,13 @@ namespace Entities
 				if (intersection.y <= 0)
 				{
 					this->velocity.y = 0;
+					this->velocity.x = 1;
 				}
 
 			}
 			if (other->getId() == platform)
 			{
+				canJump = true;
 				velocity.y = 0;
 			}
 
@@ -148,12 +154,33 @@ namespace Entities
 		
 		void Player::updateSprite(const float dt)
 		{
+			restartAttackSprite(dt);
+
+			if (getWasAttacked() && !getIsAttacking()) { sprite.update(GraphicalElements::Animation_ID::takeHit, isFacingLeft(), position, dt); }
 			if (getIsWalking()){ sprite.update(GraphicalElements::Animation_ID::run, isFacingLeft(), position, dt); }
 			
-			if (isAttacking) { sprite.update(GraphicalElements::Animation_ID::attack, isFacingLeft(), position, dt); }
+			if (!canJump) { sprite.update(GraphicalElements::Animation_ID::jump, isFacingLeft(), position, dt); }
+			if (getIsAttacking()) { sprite.update(GraphicalElements::Animation_ID::attack, isFacingLeft(), position, dt); }
 
-			else if(!getIsWalking()) { sprite.update(GraphicalElements::Animation_ID::idle, isFacingLeft(), position, dt); }
+			if(!getIsWalking() && !getIsAttacking() && !getWasAttacked() && canJump) { sprite.update(GraphicalElements::Animation_ID::idle, isFacingLeft(), position, dt); }
+			
+			
 
+		
+
+		}
+
+		void Player::restartAttackSprite(const float dt)
+		{
+			if (getWasAttacked())
+			{
+				attackedCooldown += dt;
+				if (attackedCooldown >= 1)
+				{
+					attackedCooldown = 0;
+					setWasAttacked(false);
+				}
+			}
 		}
 	}
 }

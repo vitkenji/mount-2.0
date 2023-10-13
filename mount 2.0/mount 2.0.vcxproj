@@ -134,6 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="animation.cpp" />
+    <ClCompile Include="button.cpp" />
     <ClCompile Include="character.cpp" />
     <ClCompile Include="collisionmanager.cpp" />
     <ClCompile Include="enemy.cpp" />
@@ -147,6 +148,7 @@
     <ClCompile Include="graphicmanager.cpp" />
     <ClCompile Include="inputmanager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="menucontrol.cpp" />
     <ClCompile Include="movingentity.cpp" />
     <ClCompile Include="multiframeanimation.cpp" />
     <ClCompile Include="observer.cpp" />
@@ -158,9 +160,11 @@
     <ClCompile Include="skeleton.cpp" />
     <ClCompile Include="states.cpp" />
     <ClCompile Include="staticentity.cpp" />
+    <ClCompile Include="text.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="animation.h" />
+    <ClInclude Include="button.h" />
     <ClInclude Include="collisionmanager.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="coordinate.h" />
@@ -176,6 +180,8 @@
     <ClInclude Include="inputmanager.h" />
     <ClInclude Include="level.h" />
     <ClInclude Include="list.h" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="menucontrol.h" />
     <ClInclude Include="movingentity.h" />
     <ClInclude Include="character.h" />
     <ClInclude Include="multiframeanimation.h" />
@@ -191,6 +197,7 @@
     <ClInclude Include="statemachine.h" />
     <ClInclude Include="staticentity.h" />
     <ClInclude Include="std.h" />
+    <ClInclude Include="text.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

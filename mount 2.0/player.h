@@ -9,10 +9,12 @@ namespace Entities
 		class Player : public Character
 		{
 		private:
+			float attackedCooldown;
 			int coins;
 			int points;
 			bool isWalking;
 			bool isSprinting;
+			bool isJumping;
 			bool canJump;
 
 		public:
@@ -27,6 +29,7 @@ namespace Entities
 			void sprint();
 			void setIsSprinting(bool flag);
 			bool getIsSprinting();
+			void restartAttackSprite(const float dt);
 
 			void walk(bool left);
 		    void initialize();

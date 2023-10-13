@@ -20,3 +20,7 @@
 
 #define FIRE_WIDTH 24
 #define FIRE_HEIGHT 32
+
+//graphical elements
+#define TEXT_SIZE 24
+

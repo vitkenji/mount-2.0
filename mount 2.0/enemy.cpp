@@ -18,10 +18,13 @@ namespace Entities
 
 			void Enemy::collide(Entity* other, Math::CoordinateF intersection)
 			{
-				if (intersection.x <= 0)
+				if (other->getId() == player)
 				{
-					velocity.x = 0;
+					if (intersection.x <= 0)
+					{
+						velocity.x = 0;
 
+					}
 				}
 
 				if (intersection.y <= 0)
