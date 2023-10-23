@@ -6,7 +6,7 @@ namespace Entities
 	{
 		namespace Enemies
 		{
-			Enemy::Enemy(Math::CoordinateF position, Math::CoordinateF size, ID id, Math::CoordinateF velocity, int life) : Character(position, size, id, velocity, life)
+			Enemy::Enemy(Math::CoordinateF position, Math::CoordinateF size, ID id, Math::CoordinateF velocity, int life) : Character(position, size, id, velocity, life), pPlayer(pPlayer)
 			{
 
 			}
@@ -23,6 +23,7 @@ namespace Entities
 					if (intersection.x <= 0)
 					{
 						velocity.x = 0;
+						this->life -= 1;
 
 					}
 				}
@@ -31,8 +32,18 @@ namespace Entities
 				{
 					this->velocity.y = 0;
 				}
+				if (this->life <= 0)
+				{
+					setActive(false);
+
+				}
 			}
-			
+		
+			void Enemy::setPlayer(Player* pPlayer)
+			{
+				this->pPlayer = pPlayer;
+
+			}
 		}
 	}
 }

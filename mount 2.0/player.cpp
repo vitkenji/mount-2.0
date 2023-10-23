@@ -5,12 +5,11 @@ namespace Entities
 	namespace Characters
 	{
 		Player::Player(Math::CoordinateF position) :
-			Character(position, Math::CoordinateF(PLAYER_SIZE_X, PLAYER_SIZE_Y), player, Math::CoordinateF(0,0), 1000)
+			Character(position, Math::CoordinateF(PLAYER_SIZE_X, PLAYER_SIZE_Y), player, Math::CoordinateF(0,0), 15000)
 		{
 			initialize();
 			coins = 0;
 			points = 0;
-			attackedCooldown = 0;
 			canJump = true;
 			
 		}
@@ -51,7 +50,7 @@ namespace Entities
 		{
 			if (canJump)
 			{
-				velocity.y = -sqrt(2*GRAVITY*0.1);
+				velocity.y = -sqrt(2*GRAVITY*PLAYER_JUMP);
 				canJump = false;
 				
 
@@ -93,6 +92,7 @@ namespace Entities
 
 		void Player::update(const float dt) 
 		{
+			std::cout << this->life << std::endl;
 			if (getIsWalking())
 			{
 				position.x += velocity.x * dt;
@@ -115,6 +115,7 @@ namespace Entities
 			sprite.addNewAnimation(GraphicalElements::Animation_ID::attack, PLAYER_ATTACK_PATH, 6, 0.2);
 			sprite.addNewAnimation(GraphicalElements::Animation_ID::jump, PLAYER_JUMP_PATH, 2, 0.2);
 			sprite.addNewAnimation(GraphicalElements::Animation_ID::takeHit, PLAYER_TAKEHIT_PATH, 4, 0.3);
+			sprite.addNewAnimation(GraphicalElements::Animation_ID::fall, PLAYER_FALL_PATH, 2, 0.3);
 
 		}
 		
@@ -127,16 +128,19 @@ namespace Entities
 				if (intersection.x <= 0)
 				{
 					this->velocity.x = 0;
-					this->life -= 10;
+					this->life -= 1;
+					
 				}
 
 				if (intersection.y <= 0)
 				{
 					this->velocity.y = 0;
-					this->velocity.x = 1;
+					if (!isFacingLeft()) { this->velocity.x *= -1; }
+
 				}
 
 			}
+
 			if (other->getId() == platform)
 			{
 				canJump = true;
@@ -145,8 +149,9 @@ namespace Entities
 
 			else if (other->getId() == fire)
 			{
+				setWasAttacked(true);
 				this->velocity.x = 0;
-				this->life -= 10;
+				this->life -= 1;
 				std::cout << getLife() << std::endl;
 			}
 
@@ -154,33 +159,18 @@ namespace Entities
 		
 		void Player::updateSprite(const float dt)
 		{
-			restartAttackSprite(dt);
+			restartSprite(dt, 1);
 
 			if (getWasAttacked() && !getIsAttacking()) { sprite.update(GraphicalElements::Animation_ID::takeHit, isFacingLeft(), position, dt); }
-			if (getIsWalking()){ sprite.update(GraphicalElements::Animation_ID::run, isFacingLeft(), position, dt); }
-			
+			if (getIsWalking() && !getIsAttacking()){ sprite.update(GraphicalElements::Animation_ID::run, isFacingLeft(), position, dt); }
 			if (!canJump) { sprite.update(GraphicalElements::Animation_ID::jump, isFacingLeft(), position, dt); }
 			if (getIsAttacking()) { sprite.update(GraphicalElements::Animation_ID::attack, isFacingLeft(), position, dt); }
-
+			if (velocity.y > 0 && !canJump && !getIsWalking() && !getIsAttacking() && !getWasAttacked()) { sprite.update(GraphicalElements::Animation_ID::fall, isFacingLeft(), position, dt); }
 			if(!getIsWalking() && !getIsAttacking() && !getWasAttacked() && canJump) { sprite.update(GraphicalElements::Animation_ID::idle, isFacingLeft(), position, dt); }
 			
-			
+
+		}
 
 		
-
-		}
-
-		void Player::restartAttackSprite(const float dt)
-		{
-			if (getWasAttacked())
-			{
-				attackedCooldown += dt;
-				if (attackedCooldown >= 1)
-				{
-					attackedCooldown = 0;
-					setWasAttacked(false);
-				}
-			}
-		}
 	}
 }

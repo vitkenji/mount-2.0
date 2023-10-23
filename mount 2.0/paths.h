@@ -3,7 +3,8 @@
 #define PLAYER_IDLE_PATH "assets/players/player1_idle.png"
 #define PLAYER_JUMP_PATH "assets/players/player1_jump.png"
 #define PLAYER_ATTACK_PATH "assets/players/player1_attack1.png"
-#define PLAYER_TAKEHIT_PATH "assets/players/take_hit.png"
+#define PLAYER_TAKEHIT_PATH "assets/players/player1_takehit.png"
+#define PLAYER_FALL_PATH "assets/players/player1_fall.png"
 
 //enemies
 #define GOBLIN_IDLE_PATH "assets/enemies/goblin/Idle.png"
@@ -23,7 +24,7 @@
 
 #define FIRE_LOOP_PATH "assets/obstacles/burning_loop_1.png"
 
-#define BACKGROUND_PATH "assets/background1.png"
+#define BACKGROUND_PATH "assets/background_cave.png"
 
 #define FONT_PATH "assets/PublicPixel.ttf"
 #define SELECTED_BUTTON_PATH ""

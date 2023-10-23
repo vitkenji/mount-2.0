@@ -1,4 +1,5 @@
 #include "skeleton.h"
+#include "player.h"
 
 namespace Entities
 {
@@ -35,7 +36,7 @@ namespace Entities
 				sprite.addNewAnimation(GraphicalElements::Animation_ID::idle, SKELETON_IDLE_PATH, 4, 0.3);
 				sprite.addNewAnimation(GraphicalElements::Animation_ID::run, SKELETON_RUN_PATH, 4, 0.3);
 				sprite.addNewAnimation(GraphicalElements::Animation_ID::attack, SKELETON_ATTACK_PATH, 8, 0.3);
-				sprite.addNewAnimation(GraphicalElements::Animation_ID::death, SKELETON_DEATH_PATH, 4, 0.3);
+				sprite.addNewAnimation(GraphicalElements::Animation_ID::death, SKELETON_DEATH_PATH, 4, 0.5);
 				sprite.addNewAnimation(GraphicalElements::Animation_ID::takeHit, SKELETON_TAKEHIT_PATH, 4, 0.3);
 				
 			}
@@ -63,7 +64,7 @@ namespace Entities
 					if (intersection.x <= 0)
 					{
 						velocity.x = 0;
-
+						if (this->pPlayer->getIsAttacking()) { this->life -= 1; }
 					}
 				}
 
@@ -71,25 +72,33 @@ namespace Entities
 				{
 					this->velocity.y = 0;
 				}
+
+				if (this->life <= 0)
+				{
+					setActive(false);
+
+				}
+
 			}
 			
 			void Skeleton::updateSprite(const float dt)
 			{
-				if(getIsWalking())
+				if (getActive())
 				{
-					if (isFacingLeft()) { sprite.update(GraphicalElements::Animation_ID::run, isFacingLeft(), position, dt); }
-					else { sprite.update(GraphicalElements::Animation_ID::run, isFacingLeft(), position, dt); }
+						if (getWasAttacked() && !getIsAttacking()) { sprite.update(GraphicalElements::Animation_ID::takeHit, isFacingLeft(), position, dt); }
+						if (getIsWalking() && !getIsAttacking()) { sprite.update(GraphicalElements::Animation_ID::run, isFacingLeft(), position, dt); }
+
+
+						if (getIsAttacking()) { sprite.update(GraphicalElements::Animation_ID::attack, isFacingLeft(), position, dt); }
+
+						if (!getIsWalking() && !getIsAttacking() && !getWasAttacked()) { sprite.update(GraphicalElements::Animation_ID::idle, isFacingLeft(), position, dt); }
+				}
+				else
+				{
+					sprite.update(GraphicalElements::Animation_ID::death, isFacingLeft(), position, dt);
 
 				}
 
-				else if (getIsAttacking())
-				{
-					sprite.update(GraphicalElements::Animation_ID::attack, isFacingLeft(), position, dt);
-
-				}
-
-				else if (!getIsWalking()) { sprite.update(GraphicalElements::Animation_ID::idle, isFacingLeft(), position, dt); }
-				
 			}
 		}
 	}

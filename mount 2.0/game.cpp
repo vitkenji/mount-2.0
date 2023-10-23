@@ -26,8 +26,10 @@ namespace States
 
         }
 
+        skeleton->setPlayer(player);
+
         execute();
-	
+	    
     }
 
     Game::~Game(){}

@@ -49,7 +49,14 @@ namespace Entities
 
 			void Goblin::updateSprite(const float dt)
 			{
-				sprite.update(GraphicalElements::Animation_ID::idle, isFacingLeft(), position, dt);
+				if (getWasAttacked() && !getIsAttacking()) { sprite.update(GraphicalElements::Animation_ID::takeHit, isFacingLeft(), position, dt); }
+				if (getIsWalking() && !getIsAttacking()) { sprite.update(GraphicalElements::Animation_ID::run, isFacingLeft(), position, dt); }
+
+				if (getIsAttacking()) { sprite.update(GraphicalElements::Animation_ID::attack, isFacingLeft(), position, dt); }
+
+				if (!getIsWalking() && !getIsAttacking() && !getWasAttacked()) { sprite.update(GraphicalElements::Animation_ID::idle, isFacingLeft(), position, dt); }
+
+
 
 			}
 

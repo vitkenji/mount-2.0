@@ -14,7 +14,8 @@ namespace GraphicalElements
 		cooldown,
 		jump,
 		takeHit,
-		death
+		death,
+		fall
 	};
 
 	class MultiFrameAnimation : public Animation

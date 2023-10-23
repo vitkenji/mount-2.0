@@ -83,6 +83,9 @@ namespace GraphicalElements
 
 	}
 
-
+	void Text::render()
+	{
+		pGraphic->render(&text);
+	}
 
 }

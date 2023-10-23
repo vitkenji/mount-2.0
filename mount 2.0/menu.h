@@ -5,6 +5,8 @@ namespace Menus
 {
 	class Menu
 	{
+	protected:
+	public:
 
 	};
 }
